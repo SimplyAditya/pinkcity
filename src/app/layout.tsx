@@ -3,8 +3,8 @@ import "./globals.css";
 import {Cormorant} from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "PinkCity Mouthfreshners",
-  description: "PinkCity Mouthfreshners",
+  title: "PinkCity MouthFresheners",
+  description: "PinkCity MouthFresheners",
 };
 
 const cormorant = Cormorant({
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable}`}>
       <body
-        className={`antialiased font-cormorant`}
+        className={`antialiased`}
       >
         {children}
       </body>
