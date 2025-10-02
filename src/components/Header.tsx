@@ -20,7 +20,7 @@ const headers = [
 const Header = () => {
   return (
     <div>
-      <div className="w-full flex items-center justify-between p-3 px-10 fixed text-sm bg-white">
+      <div className="w-full flex items-center justify-between p-3 px-10 fixed text-sm bg-whit z-100">
         <div className="w-1/5">
           <Image src={Logo} alt="PinkCity MouthFresheners Logo" priority quality={80}/>
         </div>
