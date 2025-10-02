@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   ],
 };
 
+import "@fortawesome/fontawesome-svg-core/styles.css"; // Import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false; // Disable Font Awesome's automatic CSS injection
+
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
