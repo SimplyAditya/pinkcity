@@ -8,11 +8,11 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          pinkcity: "#D9677E",
+          pinkcity: "#FE5E85",          
         },
         fontFamily: {
           cormorant: ["var(--font-cormorant)", "serif"],
-          sans: ["ui-sans-serif", "system-ui", "sans-serif"],
+          sans: ["--var(--font-poppins)"],
         },
       },
     },
