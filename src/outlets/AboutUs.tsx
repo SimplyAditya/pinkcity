@@ -1,11 +1,40 @@
+'use client';
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Leaf from "../../public/images/leaf.svg";
 import AboutUsLogo from "../../public/images/about_us.svg";
 import AboutUs1 from "../../public/multimedia/about_us_1.png";
 import AboutUs2 from "../../public/multimedia/about_us_2.png";
 
 const AboutUs = () => {
+  const [isInView, setIsInView] = useState(false);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setTimeout(() => {
+          setIsInView(entry.isIntersecting);
+        }, 500); // Delay of 500ms
+        //
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the element is visible
+        rootMargin: "0px 0px -10% 0px", // Trigger slightly before the element is fully visible
+      }
+    );
+
+    if (imageContainerRef.current) {
+      observer.observe(imageContainerRef.current);
+    }
+
+    return () => {
+      if (imageContainerRef.current) {
+        observer.unobserve(imageContainerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="w-full py-14 px-0 flex flex-col justify-center items-center gap-6 relative">
       <h1 className="relative inline-block text-5xl font-extrabold tracking-[0.02em] my-auto">
@@ -25,7 +54,7 @@ const AboutUs = () => {
           </h2>
           <p>
             Welcome to Pink City Mouth Freshener, where every blend is a
-            reflection of India{"'"}s timeless hospitality and Jaipur{"'"}s rich
+            reflection of India{"\'"}s timeless hospitality and Jaipur{"\'"}s rich
             cultural heritage. <br /> Since 1982, we have been dedicated to
             creating premium mouth fresheners that combine authentic flavors,
             unmatched freshness, and uncompromising hygiene. What began as a
@@ -40,12 +69,11 @@ const AboutUs = () => {
           <p>
             Our philosophy is simple: <b>every pinch should delight.</b> From
             classic blends loved for generations to innovative flavors crafted
-            for today
-            {"'"}s tastes, we ensure that every product carries our promise of
+            for today{"\'"}s tastes, we ensure that every product carries our promise of
             quality, purity, and care.
             <br />
             <br />
-            At Pink City, we don{"'"}t just make mouth fresheners — we curate
+            At Pink City, we don{"\'"}t just make mouth fresheners — we curate
             experiences. With a legacy built on trust and a future driven by
             innovation, we invite you to join us in this flavorful journey.
             <br />
@@ -55,8 +83,9 @@ const AboutUs = () => {
         <div
           className="max-w-2/5 h-full flex items-center justify-center"
           id="aboutUsImages"
+          ref={imageContainerRef}
         >
-          <div className="parent">
+          <div className={`parent ${isInView ? 'animate-on-scroll' : ''}`}>
             <Image
               src={AboutUs1}
               alt="About Us Image 1"

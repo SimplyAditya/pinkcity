@@ -29,12 +29,37 @@ body {
   font-family: var(--font-poppins);
 }
 .parent {
-display: grid;
-grid-template-columns: 1fr 3fr;
-grid-template-rows: 3fr 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 3fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.div1 { grid-area: 2 / 1 / 3 / 2; }
-.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div1 {
+  grid-area: 1 / 2 / 2 / 3; /* Large 3/4 area */
+  z-index: 10;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: scale(1.05);
+  border-radius: 10% !important;
+  transition: all 0.5s ease-in-out;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 2; /* Small 1/4 area */
+  z-index: 5;
+  transform: scale(1);
+  border-radius: 10% !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.parent:hover .div1,
+.parent.animate-on-scroll .div1 {
+  transform: scale(0.25) translateX(-266.67%) translateY(266.67%);
+  z-index: 5;
+}
+
+.parent:hover .div2,
+.parent.animate-on-scroll .div2 {
+  transform: scale(3) translateX(66.67%) translateY(-66.67%);
+  z-index: 10;
+}

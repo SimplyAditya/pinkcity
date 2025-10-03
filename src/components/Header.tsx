@@ -18,7 +18,7 @@ const headers = [
 
 const Header = () => {
   return (
-    <div className="w-full flex items-center justify-between p-3 px-10 fixed text-sm bg-white z-20">
+    <div className="w-full flex items-center justify-between p-3 px-10 fixed text-sm bg-white/80 z-20 backdrop-blur-lg shadow-xs">
       <div className="w-1/5">
         <Logo />
       </div>
