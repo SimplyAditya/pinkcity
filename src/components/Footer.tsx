@@ -14,7 +14,8 @@ const Footer = () => {
         />
         <div>
           <p className="text-sm opacity-90 mt-4">
-            © {new Date().getFullYear()} PinkCity MouthFresheners. All rights reserved.
+            © {new Date().getFullYear()} PinkCity MouthFresheners. All rights
+            reserved.
           </p>
           <p className="text-sm opacity-90">
             Crafted with ❤️ in Jaipur, India.
