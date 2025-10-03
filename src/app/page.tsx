@@ -1,6 +1,7 @@
 import AboutBanner from "@/outlets/AboutBanner";
 import AboutUs from "@/outlets/AboutUs";
 import Hero from "@/outlets/Hero";
+import ProductBanner from "@/outlets/ProductBanner";
 
 export default function Home() {
   return <>
@@ -8,6 +9,7 @@ export default function Home() {
   <Hero />
   <AboutBanner />
   <AboutUs />
+  <ProductBanner />
   </div> 
   </>;
 }
