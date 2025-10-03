@@ -19,8 +19,7 @@ const headers = [
 
 const Header = () => {
   return (
-    <div>
-      <div className="w-full flex items-center justify-between p-3 px-10 fixed text-sm bg-whit z-100">
+      <div className="w-full flex items-center justify-between p-3 px-10 fixed text-sm bg-white z-20">
         <div className="w-1/5">
           <Image src={Logo} alt="PinkCity MouthFresheners Logo" priority quality={80}/>
         </div>
@@ -31,7 +30,6 @@ const Header = () => {
           <button className="bg-[#D93A61] text-white py-2.5 px-5 rounded-[9]">CONTACT US</button>
         </div>
       </div>
-    </div>
   );
 };
 
