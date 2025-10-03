@@ -1,4 +1,5 @@
 import AboutBanner from "@/outlets/AboutBanner";
+import AboutUs from "@/outlets/AboutUs";
 import Hero from "@/outlets/Hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
   <div className="mx-auto">
   <Hero />
   <AboutBanner />
+  <AboutUs />
   </div> 
   </>;
 }

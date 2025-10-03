@@ -1,17 +1,11 @@
 import React from "react";
-import Logo from "../../public/images/logo.svg";
-import Image from "next/image";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <div className="bg-black text-white text-center flex items-start justify-between p-16">
       <div className="flex flex-col items-center gap-10">
-        <Image
-          src={Logo}
-          alt="PinkCity MouthFresheners Logo"
-          priority
-          quality={80}
-        />
+        <Logo />
         <div>
           <p className="text-sm opacity-90 mt-4">
             © {new Date().getFullYear()} PinkCity MouthFresheners. All rights
