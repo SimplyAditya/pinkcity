@@ -27,7 +27,7 @@ const Header = () => {
           {headers.map((header) => (
             <button key={header.name}>{header.name}</button>
           ))}
-          <button className="bg-[#D93A61] text-white py-2.5 px-5 rounded-[9]">CONTACT US</button>
+          <button className="bg-pinkcity-dark text-white py-2.5 px-5 rounded-[9]">CONTACT US</button>
         </div>
       </div>
   );
