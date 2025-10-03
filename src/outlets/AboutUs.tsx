@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import Leaf from "../../public/images/leaf.svg";
 import AboutUsLogo from "../../public/images/about_us.svg";
+import AboutUs1 from "../../public/multimedia/about_us_1.png";
+import AboutUs2 from "../../public/multimedia/about_us_2.png";
 
 const AboutUs = () => {
   return (
@@ -12,6 +14,7 @@ const AboutUs = () => {
           <Image src={Leaf} alt="Leaf Design" />
         </div>
       </h1>
+      {/* About Us Content */}
       <div className="flex items-center justify-between w-full mt-16">
         <div className="bg-pinkcity-dark rounded-r-[50] max-w-1/3">
           <Image src={AboutUsLogo} alt="About Us Illustration" />
@@ -29,6 +32,43 @@ const AboutUs = () => {
             small initiative rooted in tradition has today grown into a trusted
             name across households in India and beyond.
           </p>
+        </div>
+      </div>
+      {/* Philosophy Section */}
+      <div className="w-full flex items-center justify-between py-20 px-14">
+        <div className="max-w-2/5 text-lg text-justify flex flex-col gap-12">
+          <p>
+            Our philosophy is simple: <b>every pinch should delight.</b> From
+            classic blends loved for generations to innovative flavors crafted
+            for today
+            {"'"}s tastes, we ensure that every product carries our promise of
+            quality, purity, and care.
+            <br />
+            <br />
+            At Pink City, we don{"'"}t just make mouth fresheners — we curate
+            experiences. With a legacy built on trust and a future driven by
+            innovation, we invite you to join us in this flavorful journey.
+            <br />
+            Pink City Mouth Freshener — Where Taste Meets Tradition.
+          </p>
+        </div>
+        <div
+          className="max-w-2/5 h-full flex items-center justify-center"
+          id="aboutUsImages"
+        >
+          <div className="parent">
+            <Image
+              src={AboutUs1}
+              alt="About Us Image 1"
+              className="div1 rounded-4xl"
+            />
+
+            <Image
+              src={AboutUs2}
+              alt="About Us Image 2"
+              className="div2 rounded-4xl"
+            />
+          </div>
         </div>
       </div>
     </div>
