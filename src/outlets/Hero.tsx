@@ -10,7 +10,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsAnimated(true);
-    }, 100);
+    }, 200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -26,10 +26,10 @@ const Hero = () => {
               alt="Elaichi decoration"
               width={104}
               height={104}
-              className={`absolute z-5 transform rotate-45 transition-all duration-1000 w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 ${
+              className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 ${
                 isAnimated
-                  ? "top-[-6%] right-[5%] scale-120"
-                  : "top-[-20%] right-[-20%] scale-160"
+                  ? "top-[-6%] right-[5%] scale-120 rotate-25"
+                  : "top-[-20%] right-[-20%] scale-160 rotate-75"
               }`}
             />
             <Image
@@ -37,10 +37,10 @@ const Hero = () => {
               alt="Elaichi decoration"
               width={112}
               height={112}
-              className={`absolute z-5 transform rotate-12 transition-all duration-1000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
+              className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
                 isAnimated
-                  ? "top-[8%] left-[15%] scale-75"
-                  : "top-[5%] left-[5%] scale-100"
+                  ? "top-[8%] left-[15%] scale-75 rotate-30"
+                  : "top-[5%] left-[5%] scale-100 rotate-2"
               }`}
             />
             <Image
@@ -48,10 +48,10 @@ const Hero = () => {
               alt="Elaichi decoration"
               width={112}
               height={112}
-              className={`absolute z-5 transform -rotate-15 transition-all duration-1000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
+              className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
                 isAnimated
-                  ? "bottom-[20%] left-[8%] scale-75"
-                  : "bottom-[5%] left-[5%] scale-100"
+                  ? "bottom-[20%] left-[8%] scale-75 -rotate-45"
+                  : "bottom-[5%] left-[5%] scale-100 -rotate-5"
               }`}
             />
             <Image
@@ -59,10 +59,10 @@ const Hero = () => {
               alt="Elaichi decoration"
               width={112}
               height={112}
-              className={`absolute z-5 transform rotate-25 transition-all duration-1000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
+              className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
                 isAnimated
-                  ? "bottom-[25%] right-[25%] scale-75"
-                  : "bottom-[5%] right-[5%] scale-100"
+                  ? "bottom-[25%] right-[25%] scale-75 rotate-40"
+                  : "bottom-[5%] right-[5%] scale-100 rotate-13"
               }`}
             />
             {/* Top area stars */}
@@ -196,7 +196,7 @@ const Hero = () => {
             <h1 className="">Aisa</h1>
             <div className="relative">
               <div
-                className={`absolute inset-0 bg-[#51914E] transform -rotate-2 origin-left transition-transform duration-1000 ${
+                className={`absolute inset-0 bg-[#51914E] transform -rotate-2 origin-left transition-transform duration-2000 ${
                   isAnimated ? "scale-x-100" : "scale-x-10"
                 }`}
               ></div>
@@ -215,8 +215,8 @@ const Hero = () => {
           </div>
           <div className="relative h-4/10 lg:h-3/10 xl:h-1/10 min-h-42 w-full flex justify-center overflow-hidden">
             <button
-              className={`absolute left-1/2 -translate-x-1/2 transition-all duration-1000 ${
-                isAnimated ? "bottom-[60%]" : "bottom-[-10%]"
+              className={`absolute left-1/2 -translate-x-1/2 transition-all duration-2000 ${
+                isAnimated ? "bottom-[60%] opacity-100" : "bottom-[-10%] opacity-0"
               } bg-[#51914E] rounded-[10] p-6 py-2`}
             >
               <h1 className="text-white text-3xl">EXPLORE !</h1>
