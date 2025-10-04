@@ -26,11 +26,17 @@ const TopSellerItem = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {" "}
       <div style={{ minHeight: initialHeight }} className="relative w-full">
+        <div className="w-full bg-white h-0 group-hover:h-full flex justify-center items-center transition-all  duration-200 delay-[1500ms]">
+          <p className="text-pinkcity-dark font-medium opacity-0 group-hover:opacity-100 transition-all duration-200 [transition-delay:500ms] group-hover:[transition-delay:500ms] text-4xl" style={{ fontFamily: "var(--font-bentham)" }}>EXPLORE</p>
+        </div>
         <div
           ref={containerRef}
           id="container"
-          className={`w-full absolute bottom-0 left-0 rounded-t-[20px] overflow-hidden bg-[radial-gradient(circle,_#FE5E85,_#D93A61)] flex flex-col items-center transition-all duration-1500 ${isHovered ? "" : "pt-20"}`}
+          className={`w-full absolute bottom-0 left-0 rounded-t-[20px] overflow-hidden bg-[radial-gradient(circle,_#FE5E85,_#D93A61)] flex flex-col items-center transition-all duration-1500 ${
+            isHovered ? "" : "pt-20"
+          }`}
         >
           <div className="h-full w-4/5 flex items-center justify-center relative">
             <Image
@@ -40,7 +46,7 @@ const TopSellerItem = () => {
             />
           </div>
           <p
-            className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[110%] text-white text-5xl text-center transition-all duration-1500 group-hover:opacity-0 group-hover:-translate-y-[400%]"
+            className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[110%] text-white text-5xl text-center transition-all duration-1000 group-hover:opacity-0 group-hover:-translate-y-[400%]"
             style={{ fontFamily: "var(--font-bentham)" }}
           >
             SWEET
