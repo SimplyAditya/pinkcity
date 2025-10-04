@@ -13,7 +13,7 @@ const TopSellers = () => {
   return (
     <div className="w-full py-24 flex flex-col justify-center items-center gap-14 relative">
       <SectionHeading title="Top Sellers" />
-      <div className="w-full p-16 flex justify-around items-center gap-6">
+      <div className="w-full p-16 pb-0 flex justify-around items-center gap-6">
         {topSellersData.map((item, index) => (
           <TopSellerItem
             key={index}
