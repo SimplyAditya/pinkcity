@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Poppins, Bentham } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -34,6 +34,12 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const bentham = Bentham({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-bentham",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}`}>
+      <body className={`${poppins.variable} ${bentham.variable}`}>
         <Header />
         {children}
         <Footer />

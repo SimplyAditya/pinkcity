@@ -13,6 +13,7 @@ module.exports = {
         fontFamily: {
           cormorant: ["var(--font-cormorant)", "serif"],
           sans: ["--var(--font-poppins)"],
+
         },
       },
     },
