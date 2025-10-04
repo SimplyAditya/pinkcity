@@ -1,21 +1,18 @@
-import Image from 'next/image'
-import React from 'react'
-import Leaf from "../../public/images/leaf.svg";
-
+import React from "react";
+import TopSellerItem from "@/components/TopSellerItem";
+import SectionHeading from "@/components/SectionHeading";
 
 const TopSellers = () => {
   return (
-    <div className='w-full py-14 px-0 flex flex-col justify-center items-center gap-6 relative'>
-<h1 className="relative inline-block text-5xl font-extrabold tracking-[0.02em] my-auto">
-        Top Sellers
-        <div className="absolute bottom-[-25%] right-[-15%] z-[-1] opacity-80">
-          <Image src={Leaf} alt="Leaf Design" />
-        </div>
-      </h1>
-
-
+    <div className="w-full py-24 flex flex-col justify-center items-center gap-14 relative">
+      <SectionHeading title="Top Sellers" />
+      <div className="w-full p-16 flex justify-around items-center gap-6">
+      <TopSellerItem />
+      <TopSellerItem />
+      <TopSellerItem />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TopSellers
+export default TopSellers;

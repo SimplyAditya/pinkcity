@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import Leaf from "../../public/images/leaf.svg";
 import AboutUsLogo from "../../public/images/about_us.svg";
 import AboutUs1 from "../../public/multimedia/about_us_1.png";
 import AboutUs2 from "../../public/multimedia/about_us_2.png";
+import SectionHeading from "@/components/SectionHeading";
 
 const AboutUs = () => {
   const [isInView, setIsInView] = useState(false);
@@ -37,12 +37,7 @@ const AboutUs = () => {
 
   return (
     <div className="w-full py-14 px-0 flex flex-col justify-center items-center gap-6 relative">
-      <h1 className="relative inline-block text-5xl font-extrabold tracking-[0.02em] my-auto">
-        About Us
-        <div className="absolute bottom-[-25%] right-[-15%] z-[-1] opacity-80">
-          <Image src={Leaf} alt="Leaf Design" />
-        </div>
-      </h1>
+      <SectionHeading title="About Us" />
       {/* About Us Content */}
       <div className="flex items-center justify-between w-full mt-16">
         <div className="bg-pinkcity-dark rounded-r-[50] max-w-1/3">

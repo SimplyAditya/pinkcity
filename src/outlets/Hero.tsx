@@ -68,127 +68,127 @@ const Hero = () => {
             {/* Top area stars */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[10%] left-[8%] text-pinkcity text-lg sm:text-xl md:text-2xl transform rotate-12 opacity-80" 
+              className="absolute top-[10%] left-[8%] text-pinkcity text-lg sm:text-2xl md:text-4xl transform rotate-12 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[15%] right-[12%] text-pinkcity-dark text-sm sm:text-lg md:text-xl transform -rotate-45 opacity-80" 
+              className="absolute top-[15%] right-[12%] text-pinkcity-dark text-sm sm:text-lg md:text-xl transform -rotate-45 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[8%] left-[25%] text-pinkcity text-xs sm:text-sm md:text-lg transform rotate-90 opacity-80" 
+              className="absolute top-[8%] left-[25%] text-pinkcity text-xs sm:text-sm md:text-lg transform rotate-90 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[12%] right-[30%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-30 opacity-80" 
+              className="absolute top-[12%] right-[30%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-30 opacity-90" 
             />
             
             {/* Around main title stars */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[22%] left-[15%] text-pinkcity-dark text-lg sm:text-xl md:text-2xl transform rotate-45 opacity-80" 
+              className="absolute top-[22%] left-[15%] text-pinkcity-dark text-lg sm:text-xl md:text-2xl transform rotate-45 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[28%] right-[18%] text-pinkcity text-sm sm:text-lg transform -rotate-60 opacity-80" 
+              className="absolute top-[28%] right-[18%] text-pinkcity text-sm sm:text-lg transform -rotate-60 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[25%] left-[40%] text-pinkcity-dark text-xs sm:text-sm md:text-lg transform rotate-15 opacity-80" 
+              className="absolute top-[25%] left-[40%] text-pinkcity-dark text-xs sm:text-sm md:text-lg transform rotate-15 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[32%] right-[45%] text-pinkcity text-sm sm:text-lg transform -rotate-75 opacity-80" 
+              className="absolute top-[32%] right-[45%] text-pinkcity text-sm sm:text-lg transform -rotate-75 opacity-90" 
             />
             
             {/* Between title and subtitle stars */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[38%] left-[10%] text-pinkcity text-lg sm:text-xl transform rotate-90 opacity-80" 
+              className="absolute top-[38%] left-[10%] text-pinkcity text-lg sm:text-xl transform rotate-90 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[42%] right-[8%] text-pinkcity-dark text-sm sm:text-lg md:text-xl transform -rotate-12 opacity-80" 
+              className="absolute top-[42%] right-[8%] text-pinkcity-dark text-sm sm:text-lg md:text-xl transform -rotate-12 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[40%] left-[35%] text-pinkcity text-xs sm:text-sm transform rotate-135 opacity-80" 
+              className="absolute top-[40%] left-[35%] text-pinkcity text-xs sm:text-sm transform rotate-135 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[44%] right-[35%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-45 opacity-80" 
+              className="absolute top-[44%] right-[35%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-45 opacity-90" 
             />
             
             {/* Around subtitle stars */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[52%] left-[12%] text-pinkcity-dark text-lg sm:text-xl transform rotate-60 opacity-65" 
+              className="absolute top-[52%] left-[12%] text-pinkcity-dark text-lg sm:text-xl transform rotate-60 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[48%] right-[15%] text-pinkcity text-sm sm:text-lg transform -rotate-90 opacity-50" 
+              className="absolute top-[48%] right-[15%] text-pinkcity text-sm sm:text-lg transform -rotate-90 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[55%] left-[25%] text-pinkcity text-xs sm:text-sm md:text-lg transform rotate-30 opacity-35" 
+              className="absolute top-[55%] left-[25%] text-pinkcity text-xs sm:text-sm md:text-lg transform rotate-30 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[50%] right-[25%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-105 opacity-55" 
+              className="absolute top-[50%] right-[25%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-105 opacity-90" 
             />
             
             {/* Around tagline stars */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[62%] left-[8%] text-pinkcity text-lg sm:text-xl transform rotate-45 opacity-60" 
+              className="absolute top-[62%] left-[8%] text-pinkcity text-lg sm:text-xl transform rotate-45 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[66%] right-[10%] text-pinkcity-dark text-sm sm:text-lg md:text-xl transform -rotate-75 opacity-50" 
+              className="absolute top-[66%] right-[10%] text-pinkcity-dark text-sm sm:text-lg md:text-xl transform -rotate-75 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[64%] left-[30%] text-pinkcity-dark text-xs sm:text-sm transform rotate-120 opacity-40" 
+              className="absolute top-[64%] left-[30%] text-pinkcity-dark text-xs sm:text-sm transform rotate-120 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[68%] right-[30%] text-pinkcity text-sm sm:text-lg transform -rotate-15 opacity-45" 
+              className="absolute top-[68%] right-[30%] text-pinkcity text-sm sm:text-lg transform -rotate-15 opacity-90" 
             />
             
             {/* Bottom area stars */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[75%] left-[15%] text-pinkcity-dark text-lg sm:text-xl transform rotate-75 opacity-55" 
+              className="absolute top-[75%] left-[15%] text-pinkcity-dark text-lg sm:text-xl transform rotate-75 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[72%] right-[20%] text-pinkcity text-sm sm:text-lg transform -rotate-30 opacity-50" 
+              className="absolute top-[72%] right-[20%] text-pinkcity text-sm sm:text-lg transform -rotate-30 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[78%] left-[40%] text-pinkcity text-xs sm:text-sm md:text-lg transform rotate-90 opacity-35" 
+              className="absolute top-[78%] left-[40%] text-pinkcity text-xs sm:text-sm md:text-lg transform rotate-90 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[74%] right-[40%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-60 opacity-60" 
+              className="absolute top-[74%] right-[40%] text-pinkcity-dark text-sm sm:text-lg transform -rotate-60 opacity-90" 
             />
             
             {/* Additional scattered stars for density */}
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[18%] left-[60%] text-pinkcity text-xs sm:text-sm transform rotate-45 opacity-30" 
+              className="absolute top-[18%] left-[60%] text-pinkcity text-xs sm:text-sm transform rotate-45 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[35%] left-[65%] text-pinkcity-dark text-sm transform -rotate-90 opacity-40" 
+              className="absolute top-[35%] left-[65%] text-pinkcity-dark text-sm transform -rotate-90 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[58%] left-[55%] text-pinkcity text-xs sm:text-sm transform rotate-15 opacity-35" 
+              className="absolute top-[58%] left-[55%] text-pinkcity text-xs sm:text-sm transform rotate-15 opacity-90" 
             />
             <FontAwesomeIcon 
               icon={faStar} 
-              className="absolute top-[45%] left-[70%] text-pinkcity-dark text-sm transform -rotate-45 opacity-45" 
+              className="absolute top-[45%] left-[70%] text-pinkcity-dark text-sm transform -rotate-45 opacity-90" 
             />
           </div>
 
