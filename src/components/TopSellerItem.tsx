@@ -66,7 +66,7 @@ const TopSellerItem = ({ text, imageSrc }: Props) => {
             <Image
               src={imageSrc}
               alt={text}
-              className="w-full z-10 object-cover transition-all duration-500 transform scale-[1.1] translate-y-[70%] group-hover:scale-[.5] group-hover:rotate-180 group-hover:translate-y-0"
+              className="w-full z-10 object-cover transition-all duration-1500 transform scale-[1.1] translate-y-[70%] group-hover:scale-[.5] group-hover:rotate-180 group-hover:translate-y-0"
             />
           </div>
         </div>
