@@ -52,6 +52,15 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* all chromium browsers*/
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .parent:hover .div1,
 .parent.animate-on-scroll .div1 {
   transform: scale(0.25) translateX(-266.67%) translateY(266.67%);
