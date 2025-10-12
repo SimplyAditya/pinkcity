@@ -45,11 +45,11 @@ const AboutUs = () => {
         <div className="bg-pinkcity-dark rounded-r-[50] max-w-1/3 overflow-hidden z-10 sticky top-45">
           <Image src={AboutUsLogo} alt="About Us Illustration" />
         </div>
-        <div className="max-w-3/5 text-lg text-justify px-14 py-4 flex flex-col gap-12">
-          <h2 className="font-semibold text-2xl">
+        <div className="max-w-3/5 text-lg px-14 py-4 flex flex-col gap-12">
+          <h2 className="font-semibold text-2xl sticky top-40 bg-white py-2 z-10">
             Celebrating Tradition, Crafting Flavor
           </h2>
-          <p>
+          <p className="text-justify">
             Welcome to Pink City Mouth Freshener, where every blend is a tribute
             to India{"'"}s timeless hospitality and the rich cultural heritage
             of Jaipur. Nestled in the heart of the Pink City, we take pride in

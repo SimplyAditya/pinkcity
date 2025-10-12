@@ -7,7 +7,7 @@ import TopSellers from "@/outlets/TopSellers";
 
 export default function Home() {
   return <>
-  <div className="mx-auto">
+  <div className="mx-auto no-scrollbar">
   <Hero />
   <AboutBanner />
   <AboutUs />

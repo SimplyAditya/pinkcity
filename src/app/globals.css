@@ -72,3 +72,16 @@ body {
   transform: scale(3) translateX(66.67%) translateY(-66.67%);
   z-index: 10;
 }
+
+@layer utilities {
+  .bg-gradient-border {
+    background-image: linear-gradient(to bottom right, #d93a61 0%, rgba(230, 75, 113, 0.23) 50%, #d93a61 100%);
+  }
+  .product-title-animation {
+    transition: transform 1s ease-in-out, color 0.5s ease-in-out 0.5s;
+  }
+  .group:hover .product-title-animation {
+    transform: scale(1.2) translateY(10%);
+    color: white;
+  }
+}
