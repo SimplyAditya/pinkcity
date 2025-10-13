@@ -85,3 +85,29 @@ body {
     color: white;
   }
 }
+
+@keyframes bounce-up {
+  0%, 100% {
+    transform: translateY(-40%);
+  }
+  50% {
+    transform: translateY(-45%);
+  }
+}
+
+@keyframes bounce-down {
+  0%, 100% {
+    transform: translateY(-20%);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+}
+
+.bounce-up {
+  animation: bounce-up 4s infinite;
+}
+
+.bounce-down {
+  animation: bounce-down 4s infinite;
+}
