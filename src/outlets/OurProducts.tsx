@@ -40,7 +40,7 @@ const products = [
 
 const OurProducts = () => {
   return (
-    <div className='w-full p-10 flex flex-col justify-center items-center'>
+    <div id="products" className='w-full p-10 flex flex-col justify-center items-center'>
         <SectionHeading title="Our Products" />
         <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 py-20'>
           {products.map((product, index) => (

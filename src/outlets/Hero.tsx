@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="w-full h-screen bg-white flex items-center justify-center pt-16 px-10">
+      <div id="hero" className="w-full h-screen bg-white flex items-center justify-center pt-16 px-10">
         <div className="relative w-full h-11/12 text-center bg-[radial-gradient(circle,_#FE5E85,_#D93A61)] rounded-[59] flex flex-col items-center justify-end lg:gap-6 xl:gap-10">
           {/* Background Stars and Elaichi */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[59]">

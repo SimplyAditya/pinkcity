@@ -15,7 +15,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-screen p-20 bg-pinkcity-dark flex flex-col justify-center items-center text-white">
+    <div id="contact" className="w-screen p-20 bg-pinkcity-dark flex flex-col justify-center items-center text-white">
       {alert?.show && (
         <Alert
           message={alert.message}
