@@ -33,10 +33,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, image }) => {
         </h3>
       </div>
       {/* Corner Designs */}
-      <Image src={Design} alt="design" className="absolute top-2 left-2 w-10 h-10 opacity-0 group-hover:opacity-100" />
-      <Image src={Design} alt="design" className="absolute top-2 right-2 w-10 h-10 opacity-0 group-hover:opacity-100 rotate-90" />
-      <Image src={Design} alt="design" className="absolute bottom-2 right-2 w-10 h-10 opacity-0 group-hover:opacity-100 rotate-180" />
-      <Image src={Design} alt="design" className="absolute bottom-2 left-2 w-10 h-10 opacity-0 group-hover:opacity-100 -rotate-90" />
+      <Image src={Design} alt="design" className="absolute top-2 left-2 w-6 h-6 md:w-10 md:h-10 opacity-0 group-hover:opacity-100" />
+      <Image src={Design} alt="design" className="absolute top-2 right-2 w-6 h-6 md:w-10 md:h-10 opacity-0 group-hover:opacity-100 rotate-90" />
+      <Image src={Design} alt="design" className="absolute bottom-2 right-2 w-6 h-6 md:w-10 md:h-10 opacity-0 group-hover:opacity-100 rotate-180" />
+      <Image src={Design} alt="design" className="absolute bottom-2 left-2 w-6 h-6 md:w-10 md:h-10 opacity-0 group-hover:opacity-100 -rotate-90" />
     </div>
   );
 };

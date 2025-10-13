@@ -45,40 +45,32 @@ const AboutUs = () => {
         <div className="bg-pinkcity-dark rounded-r-[50] max-w-1/3 overflow-hidden z-10 sticky top-45">
           <Image src={AboutUsLogo} alt="About Us Illustration" />
         </div>
-        <div className="max-w-3/5 text-lg px-14 py-4 flex flex-col gap-12">
+        <div className="max-w-3/5 text-lg px-18 py-4 flex flex-col gap-12">
           <h2 className="font-semibold text-2xl sticky top-40 bg-white py-2 z-10">
             Celebrating Tradition, Crafting Flavor
           </h2>
           <p className="text-justify">
-            Welcome to Pink City Mouth Freshener, where every blend is a tribute
-            to India{"'"}s timeless hospitality and the rich cultural heritage
-            of Jaipur. Nestled in the heart of the Pink City, we take pride in
-            offering products that are not just flavourful but also rooted
-            deeply in tradition and care.
+            Welcome to Pink City Mouth Freshener, where every blend is a
+            reflection of India’s timeless hospitality and Jaipur’s rich
+            cultural heritage.
             <br />
-            Since our founding in 1982, we{"'"}ve remained committed to creating
-            premium mouth fresheners that blend authentic Indian flavors with
-            modern expectations of freshness and hygiene. What began as a humble
-            initiative has grown into a trusted household name—across India and
-            beyond—carried forward with passion and integrity. 
-            <br/>
-            Our journey is
-            built on a simple yet powerful philosophy: every pinch should
-            delight. Whether it{"'"}s the comforting taste of classic blends
-            cherished for generations or exciting new flavours designed for
-            today{"'"}s evolving palate, we focus on delivering products that
-            leave a lasting impression. At Pink City, quality is non-negotiable.
-            From sourcing the finest ingredients to ensuring hygienic,
-            state-of-the-art packaging, we take every step to maintain the
-            highest standards. Each product reflects our unwavering commitment
-            to purity, freshness, and exceptional taste. But we don{"'"}t just
-            make mouth fresheners — we curate experiences. Each blend tells a
-            story of tradition, culture, and innovation, creating little moments
-            of joy in everyday life. It{"'"}s this unique blend of legacy and
-            creativity that keeps our customers coming back for more. As we look
-            to the future, we remain deeply rooted in the values that built our
-            brand. With innovation at the forefront and trust as our foundation,
-            we invite you to continue this flavorful journey with us.
+            <br />
+            Since 1982, we have been dedicated to creating premium mouth
+            fresheners that combine authentic flavors, unmatched freshness, and
+            uncompromising hygiene. What began as a small initiative rooted in
+            tradition has today grown into a trusted household name across India
+            and beyond.
+            <br />
+            <br />
+            Our journey is built on passion and precision. From sourcing the
+            finest ingredients to perfecting each blend, every step is guided by
+            our commitment to purity, quality, and consistency.
+            <br />
+            <br />
+            At Pink City, we don’t just make mouth fresheners — we curate
+            experiences. With a legacy grounded in trust and a future driven by
+            innovation, we invite you to join us in this flavorful journey —{" "}
+            <b>where every pinch tells a story.</b>
           </p>
         </div>
       </div>
@@ -86,15 +78,28 @@ const AboutUs = () => {
       <div className="w-full flex items-start justify-between py-20 px-14">
         <div className="max-w-2/5 text-lg text-justify flex flex-col gap-12">
           <p>
-            Our philosophy is simple: <b>every pinch should delight.</b> From
-            classic blends loved for generations to innovative flavors crafted
-            for today{"'"}s tastes, we ensure that every product carries our
-            promise of quality, purity, and care.
+            At Pink City, we believe taste is tradition. Our mouth fresheners
+            are more than just an after-meal ritual — they’re a symbol of
+            warmth, culture, and connection. We craft each product with the same
+            care and respect that has defined Indian hospitality for centuries.
             <br />
             <br />
-            At Pink City, we don{"'"}t just make mouth fresheners — we curate
-            experiences. With a legacy built on trust and a future driven by
-            innovation, we invite you to join us in this flavorful journey.
+            Our philosophy is centered around three promises — authentic flavor,
+            premium quality, and absolute freshness. Every ingredient is
+            handpicked and processed under hygienic conditions to ensure that
+            what reaches you is nothing short of perfection.
+            <br />
+            <br />
+            We understand that modern consumers seek both taste and trust.
+            That’s why our blends bring together traditional recipes and
+            contemporary flavors — offering something for every generation, from
+            the nostalgic to the adventurous.
+            <br />
+            <br />
+            Choosing Pink City means choosing a brand that values honesty,
+            craftsmanship, and care. We don’t just want to satisfy your taste
+            buds — we want to become a part of your family’s everyday moments,
+            celebrations, and traditions.
             <br />
             <br />
             <b>Pink City Mouth Freshener — Where Taste Meets Tradition.</b>
