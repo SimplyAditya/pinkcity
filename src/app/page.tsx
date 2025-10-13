@@ -1,5 +1,6 @@
 import AboutBanner from "@/outlets/AboutBanner";
 import AboutUs from "@/outlets/AboutUs";
+import ContactUs from "@/outlets/ContactUs";
 import Hero from "@/outlets/Hero";
 import OurProducts from "@/outlets/OurProducts";
 import ProductBanner from "@/outlets/ProductBanner";
@@ -17,6 +18,7 @@ export default function Home() {
   <OurProducts />
   <ProductBanner />
   <SocialMediaSection />
+  <ContactUs />
   </div> 
   </>;
 }

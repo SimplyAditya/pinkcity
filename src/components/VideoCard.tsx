@@ -36,8 +36,9 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, onMouseEnter, onMouseLeave }
       <video
         ref={videoRef}
         src={src}
-        muted
         loop
+        playsInline
+        preload="auto"
         className="w-full h-full object-cover"
       />
     </div>
