@@ -1,39 +1,39 @@
 import ProductCard from '@/components/ProductCard'
 import SectionHeading from '@/components/SectionHeading'
 import React from 'react'
-import Supari from '../../public/multimedia/supari.svg'
+import Supari from '../../public/multimedia/banarasi_paan.png'
 
 const products = [
   {
-    title: "Product 1",
+    title: "Dry Date Products",
     image: Supari,
   },
   {
-    title: "Product 2",
+    title: "Mukhwas",
     image: Supari,
   },
   {
-    title: "Product 3",
+    title: "Paan Mukhwas",
     image: Supari,
   },
   {
-    title: "Product 4",
+    title: "Plain Supari",
     image: Supari,
   },
   {
-    title: "Product 5",
+    title: "Sweet Supari",
     image: Supari,
   },
   {
-    title: "Product 6",
+    title: "Saunf Products",
     image: Supari,
   },
   {
-    title: "Product 7",
+    title: "Silver Coated Products",
     image: Supari,
   },
   {
-    title: "Product 8",
+    title: "Confectionery Products",
     image: Supari,
   },
 ];

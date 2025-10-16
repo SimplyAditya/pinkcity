@@ -62,11 +62,11 @@ const TopSellerItem = ({ text, imageSrc }: Props) => {
                 </React.Fragment>
               ))}
           </p>
-          <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 flex justify-center">
+          <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-2/3 flex justify-center scale-[1.3]">
             <Image
               src={imageSrc}
               alt={text}
-              className="w-full z-10 object-cover transition-all duration-1500 transform scale-[1.1] translate-y-[70%] group-hover:scale-[.5] group-hover:rotate-180 group-hover:translate-y-0"
+              className="w-full z-10 object-cover transition-all duration-1500 transform scale-[1.1] translate-y-[70%] group-hover:scale-[.5] group-hover:rotate-180 group-hover:translate-y-[15%]"
             />
           </div>
         </div>

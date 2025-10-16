@@ -6,10 +6,10 @@ const headers = [
     name: "PRODUCTS",
     link: "#products",
   },
-  {
-    name: "PREMIUM",
-    link: "#",
-  },
+  // {
+  //   name: "PREMIUM",
+  //   link: "#",
+  // },
 ];
 
 const Header = ({ onBrochureClick }: { onBrochureClick: () => void }) => {

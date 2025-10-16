@@ -40,12 +40,16 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <h1 className="text-7xl max-w-1/2">
-          {'"'}Quote
+        <h1 className="text-7xl max-w-1/2 text-center">
+          {'"'}Where 
           <br />
-          or Personal
+          tradition
           <br />
-          Message{'"'}
+          meets taste,
+          <br />
+          and quality
+          <br />
+          never fades{'"'}
         </h1>
       </div>
     </div>

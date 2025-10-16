@@ -18,14 +18,14 @@ const BrochureOverlay = dynamic(() => import('@/components/BrochureOverlay'), { 
 const productBanners = [
   {
     title: "PAAN MUKHWAS",
-    description: "A royal blend of paan flavors enriched with crunchy supari, delivering the perfect balance of freshness and bold taste.",
+    description: "An indulgent fusion of authentic paan flavor and natural freshness — crafted to give you the true essence of India’s favorite post-meal delight.",
     image: Banner,
     bgColor: "bg-[radial-gradient(circle,_#FE5E85,_#D93A61)]",
     titleBgColor: "bg-[#51914E]",
   },
   {
     title: "MUKHWAS",
-    description: "A refreshing burst of mint and fennel, crafted to invigorate your senses and leave you with a lasting cool sensation.",
+    description: "A refreshing burst of mint, fennel, and handpicked spices — thoughtfully blended to invigorate your senses and keep your breath naturally fresh.",
     image: Banner2, // You can use a different image here
     bgColor: "bg-[radial-gradient(circle,_#FE5E85,_#D93A61)]",
     titleBgColor: "bg-[#51914E]",

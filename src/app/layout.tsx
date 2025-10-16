@@ -48,7 +48,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${bentham.variable}`}>
-        <Header />
         {children}
         <Footer />
       </body>

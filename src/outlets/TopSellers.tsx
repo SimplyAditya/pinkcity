@@ -1,12 +1,14 @@
 import React from "react";
 import TopSellerItem from "@/components/TopSellerItem";
 import SectionHeading from "@/components/SectionHeading";
-import Supari from "../../public/multimedia/supari.svg";
+import Banarasi from "../../public/multimedia/banarasi_paan.png";
+import CalcultiPaanGold from "../../public/multimedia/calcutti_pan_gold.png";
+import DryPaan from "../../public/multimedia/dry_paan.png";
 
 const topSellersData = [
-  { text: "Royal Mukhwas", imageSrc: Supari },
-  { text: "Shahi Pan", imageSrc: Supari },
-  { text: "Sweet Gulkand", imageSrc: Supari },
+  { text: "Banarasi Paan", imageSrc: Banarasi },
+  { text: "Calcutti Pan Gold", imageSrc: CalcultiPaanGold },
+  { text: "Dry Paan", imageSrc: DryPaan },
 ];
 
 const TopSellers = () => {
