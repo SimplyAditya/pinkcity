@@ -16,11 +16,12 @@ const ProductBanner: React.FC<ProductBannerProps> = ({ title, description, image
         <Image
           src={image}
           alt="Product Banner"
-          className="object-cover scale-[1.2] origin-bottom-left"
+          loading="lazy"
+          className="object-fill origin-bottom-left"
         />
       </div>
       <div className="w-1/2 text-white flex flex-col items-center justify-center">
-        <div className="h-full w-3/4 flex flex-col justify-center items-start gap-12 px-16">
+        <div className="h-full w-3/4 flex flex-col justify-center items-start gap-12 px-16 pe-0">
           <div className="relative">
             <div
               className={`absolute inset-0 ${titleBgColor} transform -rotate-2 origin-left`}
