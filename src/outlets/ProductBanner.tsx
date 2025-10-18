@@ -7,15 +7,17 @@ interface ProductBannerProps {
   image: StaticImageData;
   bgColor: string;
   titleBgColor: string;
+  alt?: string;
 }
 
-const ProductBanner: React.FC<ProductBannerProps> = ({ title, description, image, bgColor, titleBgColor }) => {
+const ProductBanner: React.FC<ProductBannerProps> = ({ title, description, image, bgColor, titleBgColor, alt }) => {
+  const defaultAlt = `PinkCity ${title} - Premium mouth freshener product by Jaipur's finest manufacturer`;
   return (
-    <div className={`w-full flex justify-baseline ${bgColor}`}>
+    <section className={`w-full flex justify-baseline ${bgColor}`}>
       <div className="w-1/2 relative overflow-hidden translate-y-[18%]">
         <Image
           src={image}
-          alt="Product Banner"
+          alt={alt || defaultAlt}
           loading="lazy"
           className="object-fill origin-bottom-left"
         />
@@ -26,14 +28,14 @@ const ProductBanner: React.FC<ProductBannerProps> = ({ title, description, image
             <div
               className={`absolute inset-0 ${titleBgColor} transform -rotate-2 origin-left`}
             ></div>
-            <h1 className="relative ps-2 pe-8 py-2 text-6xl font-extrabold">{title}</h1>
+            <h2 className="relative ps-2 pe-8 py-2 text-6xl font-extrabold">{title}</h2>
           </div>
           <p className="text-xl max-w-3/4">
             {description}
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

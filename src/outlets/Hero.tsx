@@ -16,14 +16,14 @@ const Hero = () => {
 
   return (
     <>
-      <div id="hero" className="w-full h-screen bg-white flex items-center justify-center pt-16 px-10">
+      <div id="hero" className="w-full h-screen bg-white flex items-center justify-center pt-24 px-10">
         <div className="relative w-full h-11/12 text-center bg-[radial-gradient(circle,_#FE5E85,_#D93A61)] rounded-[59] flex flex-col items-center justify-end lg:gap-6 xl:gap-10">
           {/* Background Stars and Elaichi */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[59]">
             {/* Elaichi Background Elements */}
             <Image
               src="/images/elaichi.svg"
-              alt="Elaichi decoration"
+              alt="Premium cardamom elaichi used in PinkCity mouth freshener mukhwas"
               width={104}
               height={104}
               className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 ${
@@ -34,7 +34,7 @@ const Hero = () => {
             />
             <Image
               src="/images/elaichi.svg"
-              alt="Elaichi decoration"
+              alt="Natural ingredients for authentic Jaipur mukhwas"
               width={112}
               height={112}
               className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
@@ -45,7 +45,7 @@ const Hero = () => {
             />
             <Image
               src="/images/elaichi.svg"
-              alt="Elaichi decoration"
+              alt="Fresh ingredients for PinkCity mouth freshener products"
               width={112}
               height={112}
               className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
@@ -56,7 +56,7 @@ const Hero = () => {
             />
             <Image
               src="/images/elaichi.svg"
-              alt="Elaichi decoration"
+              alt="Quality elaichi cardamom for traditional Indian mukhwas"
               width={112}
               height={112}
               className={`absolute z-5 transform transition-all duration-2000 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 ${
@@ -193,25 +193,25 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center justify-center text-7xl xl:text-8xl text-white font-bold gap-6 relative z-10">
-            <h1 className="">Aisa</h1>
+            <span className="text-7xl xl:text-8xl">Aisa</span>
             <div className="relative">
               <div
                 className={`absolute inset-0 bg-[#51914E] transform -rotate-2 origin-left transition-transform duration-2000 ${
                   isAnimated ? "scale-x-100" : "scale-x-10"
                 }`}
               ></div>
-              <h1 className="relative px-6 py-2">SWAAD,</h1>
+              <span className="relative px-6 py-2 text-7xl xl:text-8xl">SWAAD,</span>
             </div>
           </div>
           <div className="relative z-10">
-            <h1 className="text-white text-7xl xl:text-8xl font-bold">
+            <span className="text-white text-7xl xl:text-8xl font-bold">
               Jo Sada Rahe Yaad
-            </h1>
+            </span>
           </div>
           <div className="relative z-10">
-            <p className="text-white text-2xl mb-2">
-              Authentic Mouthfreshener Manufacturer
-            </p>
+            <h1 className="text-white text-2xl md:text-3xl mb-2 font-semibold">
+              PinkCity Mouth Freshener - Premium Mukhwas Manufacturer in Jaipur Since 1982
+            </h1>
           </div>
           <div className="relative h-4/10 lg:h-3/10 xl:h-1/10 min-h-42 w-full flex justify-center overflow-hidden">
             <button

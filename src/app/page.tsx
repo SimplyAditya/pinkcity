@@ -9,6 +9,7 @@ import OurProducts from "@/outlets/OurProducts";
 import ProductBanner from "@/outlets/ProductBanner";
 import SocialMediaSection from "@/outlets/SocialMediaSection";
 import TopSellers from "@/outlets/TopSellers";
+import FAQ from "@/outlets/FAQ";
 import Banner from "../../public/multimedia/banner.svg";
 import Banner2 from "../../public/multimedia/banner_2.svg";
 import Header from '@/components/Header';
@@ -18,17 +19,19 @@ const BrochureOverlay = dynamic(() => import('@/components/BrochureOverlay'), { 
 const productBanners = [
   {
     title: "PAAN MUKHWAS",
-    description: "An indulgent fusion of authentic paan flavor and natural freshness — crafted to give you the true essence of India’s favorite post-meal delight.",
+    description: "An indulgent fusion of authentic paan flavor and natural freshness — crafted to give you the true essence of India's favorite post-meal delight. PinkCity's premium paan mukhwas blends traditional Jaipur recipes with modern taste.",
     image: Banner,
     bgColor: "bg-[radial-gradient(circle,_#FE5E85,_#D93A61)]",
     titleBgColor: "bg-[#51914E]",
+    alt: "PinkCity Paan Mukhwas - Authentic Indian mouth freshener with traditional paan flavor from Jaipur",
   },
   {
     title: "MUKHWAS",
-    description: "A refreshing burst of mint, fennel, and handpicked spices — thoughtfully blended to invigorate your senses and keep your breath naturally fresh.",
-    image: Banner2, // You can use a different image here
+    description: "A refreshing burst of mint, fennel, and handpicked spices — thoughtfully blended to invigorate your senses and keep your breath naturally fresh. Our traditional mukhwas represents the finest quality ingredients from Jaipur.",
+    image: Banner2,
     bgColor: "bg-[radial-gradient(circle,_#FE5E85,_#D93A61)]",
     titleBgColor: "bg-[#51914E]",
+    alt: "PinkCity Mukhwas - Premium traditional Indian mouth freshener with fennel and spices from Jaipur",
   },
 ];
 
@@ -42,7 +45,7 @@ export default function Home() {
     <>
       <Header onBrochureClick={openBrochure} />
       {isBrochureOpen && <BrochureOverlay onClose={closeBrochure} />}
-      <div className="mx-auto no-scrollbar">
+      <main className="mx-auto no-scrollbar">
         <Hero />
         <AboutBanner />
         <AboutUs />
@@ -51,8 +54,9 @@ export default function Home() {
         <OurProducts />
         <ProductBanner {...productBanners[1]} />
         <SocialMediaSection />
+        <FAQ />
         <ContactUs />
-      </div>
+      </main>
     </>
   );
 }
