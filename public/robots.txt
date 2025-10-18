@@ -1,0 +1,23 @@
+# robots.txt for PinkCity Mouth Freshener
+# https://www.pinkcitymouthfresheners.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.pinkcitymouthfresheners.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+

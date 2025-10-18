@@ -43,66 +43,45 @@ const AboutUs = () => {
       {/* About Us Content */}
       <div className="flex items-start justify-between w-full mt-14">
         <div className="bg-pinkcity-dark rounded-r-[50] max-w-1/3 overflow-hidden z-10 sticky top-45">
-          <Image src={AboutUsLogo} alt="About Us Illustration" />
+          <Image src={AboutUsLogo} alt="PinkCity Mouth Freshener - Premium Mukhwas Manufacturer in Jaipur Since 1982" />
         </div>
         <div className="max-w-3/5 text-lg px-18 py-4 flex flex-col gap-12">
           <h2 className="font-semibold text-2xl sticky top-40 bg-white py-2 z-10">
-            Celebrating Tradition, Crafting Flavor
+            PinkCity Mouth Freshener - Celebrating Tradition, Crafting Premium Mukhwas
           </h2>
           <p className="text-justify">
-            Welcome to Pink City Mouth Freshener, where every blend is a
-            reflection of India’s timeless hospitality and Jaipur’s rich
-            cultural heritage.
+            Welcome to <strong>PinkCity Mouth Freshener</strong>, Jaipur's leading manufacturer of premium mukhwas and traditional mouth fresheners. Every blend we create is a reflection of India's timeless hospitality and Jaipur's rich cultural heritage.
             <br />
             <br />
-            Since 1982, we have been dedicated to creating premium mouth
-            fresheners that combine authentic flavors, unmatched freshness, and
-            uncompromising hygiene. What began as a small initiative rooted in
-            tradition has today grown into a trusted household name across India
-            and beyond.
+            Since 1982, we have been dedicated to creating <strong>premium mouth fresheners</strong> that combine authentic flavors, unmatched freshness, and uncompromising hygiene. What began as a small initiative rooted in tradition has today grown into a trusted household name across India and beyond. Our <strong>traditional mukhwas</strong> products are crafted with care to deliver the authentic taste of Rajasthan.
             <br />
             <br />
-            Our journey is built on passion and precision. From sourcing the
-            finest ingredients to perfecting each blend, every step is guided by
-            our commitment to purity, quality, and consistency.
+            Our journey as a <strong>mouth freshener manufacturer in Jaipur</strong> is built on passion and precision. From sourcing the finest ingredients to perfecting each blend, every step is guided by our commitment to purity, quality, and consistency. We specialize in <strong>paan mukhwas</strong>, saunf products, supari, and a wide range of mouth freshening solutions.
             <br />
             <br />
-            At Pink City, we don’t just make mouth fresheners — we curate
-            experiences. With a legacy grounded in trust and a future driven by
-            innovation, we invite you to join us in this flavorful journey —{" "}
-            <b>where every pinch tells a story.</b>
+            At <strong>PinkCity Mouth Freshener</strong>, we don't just make mouth fresheners — we curate experiences. With a legacy grounded in trust and a future driven by innovation, we invite you to join us in this flavorful journey —{" "}
+            <b>where every pinch tells a story of authentic Jaipur taste.</b>
           </p>
         </div>
       </div>
       {/* Philosophy Section */}
       <div className="w-full flex items-start justify-between py-20 px-14">
         <div className="max-w-2/5 text-lg text-justify flex flex-col gap-12">
+          <h3 className="font-semibold text-xl">Our Philosophy - Premium Quality Mukhwas for Every Occasion</h3>
           <p>
-            At Pink City, we believe taste is tradition. Our mouth fresheners
-            are more than just an after-meal ritual — they’re a symbol of
-            warmth, culture, and connection. We craft each product with the same
-            care and respect that has defined Indian hospitality for centuries.
+            At <strong>PinkCity Mouth Freshener</strong>, we believe taste is tradition. Our <strong>Indian mouth fresheners</strong> are more than just an after-meal ritual — they're a symbol of warmth, culture, and connection. We craft each <strong>mukhwas product</strong> with the same care and respect that has defined Indian hospitality for centuries.
             <br />
             <br />
-            Our philosophy is centered around three promises — authentic flavor,
-            premium quality, and absolute freshness. Every ingredient is
-            handpicked and processed under hygienic conditions to ensure that
-            what reaches you is nothing short of perfection.
+            Our philosophy is centered around three promises — <strong>authentic flavor, premium quality, and absolute freshness</strong>. Every ingredient in our <strong>Jaipur mukhwas</strong> is handpicked and processed under hygienic conditions to ensure that what reaches you is nothing short of perfection. As a trusted <strong>mouth freshener supplier</strong>, we maintain the highest standards of quality control.
             <br />
             <br />
-            We understand that modern consumers seek both taste and trust.
-            That’s why our blends bring together traditional recipes and
-            contemporary flavors — offering something for every generation, from
-            the nostalgic to the adventurous.
+            We understand that modern consumers seek both taste and trust. That's why our blends bring together traditional recipes and contemporary flavors — offering something for every generation, from the nostalgic to the adventurous. Whether you're looking for <strong>wholesale mouth fresheners</strong> or retail products, we have the perfect solution.
             <br />
             <br />
-            Choosing Pink City means choosing a brand that values honesty,
-            craftsmanship, and care. We don’t just want to satisfy your taste
-            buds — we want to become a part of your family’s everyday moments,
-            celebrations, and traditions.
+            Choosing <strong>PinkCity Mouth Freshener</strong> means choosing a brand that values honesty, craftsmanship, and care. We don't just want to satisfy your taste buds — we want to become a part of your family's everyday moments, celebrations, and traditions. Experience the authentic taste of <strong>Rajasthani mukhwas</strong> with every pinch.
             <br />
             <br />
-            <b>Pink City Mouth Freshener — Where Taste Meets Tradition.</b>
+            <b>PinkCity Mouth Freshener — Where Taste Meets Tradition Since 1982.</b>
           </p>
         </div>
         <div
@@ -113,13 +92,13 @@ const AboutUs = () => {
           <div className={`parent ${isInView ? "animate-on-scroll" : ""}`}>
             <Image
               src={AboutUs1}
-              alt="About Us Image 1"
+              alt="PinkCity Mouth Freshener traditional mukhwas manufacturing process in Jaipur"
               className="div1 rounded-4xl"
             />
 
             <Image
               src={AboutUs2}
-              alt="About Us Image 2"
+              alt="Premium quality Indian mouth freshener products by PinkCity"
               className="div2 rounded-4xl"
             />
           </div>
