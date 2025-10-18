@@ -12,7 +12,7 @@ interface ProductBannerProps {
 const ProductBanner: React.FC<ProductBannerProps> = ({ title, description, image, bgColor, titleBgColor }) => {
   return (
     <div className={`w-full flex justify-baseline ${bgColor}`}>
-      <div className="w-1/2 relative overflow-hidden">
+      <div className="w-1/2 relative overflow-hidden translate-y-[18%]">
         <Image
           src={image}
           alt="Product Banner"

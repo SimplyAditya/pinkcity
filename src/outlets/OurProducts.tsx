@@ -1,40 +1,47 @@
 import ProductCard from '@/components/ProductCard'
 import SectionHeading from '@/components/SectionHeading'
 import React from 'react'
-import Supari from '../../public/multimedia/banarasi_paan.png'
+import DryDate from "../../public/multimedia/products/dry_date_main.png";
+import Mukhwas from "../../public/multimedia/products/mukhwas_main.png";
+import PaanMukhwas from "../../public/multimedia/products/paan_mukhwas_main.png";
+import PlainSupari from "../../public/multimedia/products/plain_supari_main.png";
+import SweetSupari from "../../public/multimedia/products/sweet_supari_main.png";
+import SaufProduct from "../../public/multimedia/products/sauf_product_main.png";
+import SilverProduct from "../../public/multimedia/products/silver_product_main.png";
+import ConfectioneryProduct from "../../public/multimedia/products/confectionery_product_main.png";
 
 const products = [
   {
     title: "Dry Date Products",
-    image: Supari,
+    image: DryDate,
   },
   {
     title: "Mukhwas",
-    image: Supari,
+    image: Mukhwas,
   },
   {
     title: "Paan Mukhwas",
-    image: Supari,
+    image: PaanMukhwas,
   },
   {
     title: "Plain Supari",
-    image: Supari,
+    image: PlainSupari,
   },
   {
     title: "Sweet Supari",
-    image: Supari,
+    image: SweetSupari,
   },
   {
     title: "Saunf Products",
-    image: Supari,
+    image: SaufProduct,
   },
   {
     title: "Silver Coated Products",
-    image: Supari,
+    image: SilverProduct,
   },
   {
     title: "Confectionery Products",
-    image: Supari,
+    image: ConfectioneryProduct,
   },
 ];
 
