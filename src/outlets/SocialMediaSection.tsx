@@ -8,6 +8,7 @@ const SocialMediaSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [startBounce, setStartBounce] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const numVideos = videosData.videos.length;
 
   useEffect(() => {
     if (isExpanded) {
@@ -26,9 +27,10 @@ const SocialMediaSection = () => {
         onClick={() => setIsExpanded(true)}
       >
         {videosData.videos.map((video, index) => {
-          const rotation = (index - 2) * 5;
+          const rotation = (index - Math.floor(numVideos / 2)) * 5;
           const cardWidthPercentage = 18;
-          const gapPercentage = (100 - 5 * cardWidthPercentage) / 6;
+          const gapPercentage =
+            (100 - numVideos * cardWidthPercentage) / (numVideos + 1);
           const leftPosition =
             gapPercentage + index * (cardWidthPercentage + gapPercentage);
 
@@ -53,7 +55,8 @@ const SocialMediaSection = () => {
 
           const left = isExpanded ? `${leftPosition}%` : "50%";
 
-          let zIndex = index < 3 ? index : 4 - index;
+          let zIndex =
+            index < Math.ceil(numVideos / 2) ? index : numVideos - 1 - index;
           if (isHovered) {
             zIndex = 10;
           }
