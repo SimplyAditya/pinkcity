@@ -12,7 +12,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, image }) => {
   return (
     <div className="group rounded-[25px] p-1 bg-gradient-border transition-transform duration-1000 hover:scale-[1.1] relative hover:shadow-xl">
       <div className="bg-white pb-6 md:pb-10 rounded-[22px] flex flex-col justify-center items-center relative">
-        <div className="absolute inset-0 rounded-[22px] bg-[radial-gradient(circle,_#FF7E9E,_#E34F73)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+        <div className="absolute inset-0 rounded-[22px] bg-[radial-gradient(circle,_#FF7E9E,_#E34F73)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 flex flex-col items-center justify-center"></div>
         <div className="relative w-[80%] flex flex-col justify-center items-center pt-4">
           <Image
             src={Star}
@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, image }) => {
           />
         </div>
         <h3
-          className="relative font-bold text-2xl md:text-3xl -mt-8 md:-mt-12 product-title-animation"
+          className="relative font-bold text-2xl md:text-3xl -mt-8 md:-mt-12 product-title-animation text-center"
           style={{ fontFamily: "var(--font-bentham)" }}
         >
           {title}
