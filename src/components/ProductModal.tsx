@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Arrow from "../../public/images/arrow.svg";
 
@@ -8,11 +8,68 @@ interface ProductModalProps {
     title: string;
     image: StaticImageData;
     description: string;
+    subcategories?: string[];
+    items: {
+      title: string;
+      image: StaticImageData;
+      description: string;
+      parentCategory?: string;
+    }[];
   };
   onClose: () => void;
 }
 
+interface selectedProduct {
+  title: string;
+  image: StaticImageData;
+  description: string;
+  parentCategory?: string;
+}
 const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
+  const [selectedProduct, setSelectedProduct] =
+    useState<selectedProduct | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("");
+  const [activeProducts, setActiveProducts] = useState<selectedProduct[]>([]);
+
+  useEffect(() => {
+    setActiveCategory(product.subcategories?.[0] ?? "");
+  }, [product]);
+  useEffect(() => {
+    if (activeCategory) {
+      const filteredProducts = product.items.filter(
+        (item) => item.parentCategory === activeCategory
+      );
+      setActiveProducts(filteredProducts);
+      setSelectedProduct(filteredProducts[0] || null);
+    } else {
+      setActiveProducts(product.items);
+      setSelectedProduct(product.items[0]);
+    }
+  }, [activeCategory, product.items]);
+
+  const setNextItem = () => {
+    setSelectedProduct((prev) => {
+      if (!prev) return prev;
+      const currentIndex = activeProducts.findIndex(
+        (item) => item.title === prev.title
+      );
+      const nextIndex = (currentIndex + 1) % activeProducts.length;
+      return activeProducts[nextIndex];
+    });
+  };
+  const setPrevItem = () => {
+    setSelectedProduct((prev) => {
+      if (!prev) return prev;
+      const currentIndex = activeProducts.findIndex(
+        (item) => item.title === prev.title
+      );
+      let nextIndex = (currentIndex - 1) % activeProducts.length;
+      if (nextIndex < 0) {
+        nextIndex = activeProducts.length - 1;
+      }
+      return activeProducts[nextIndex];
+    });
+  };
   return (
     <div
       className="fixed inset-0 z-50 flex justify-center items-center"
@@ -20,7 +77,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
       style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
     >
       <div
-        className="w-4/5 md:w-3/5 max-h-3/4 rounded-[25px] p-1 bg-gradient-border"
+        className="w-9/12 rounded-[25px] p-1 bg-gradient-border"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-white p-8 rounded-[22px] flex flex-col md:flex-row items-start justify-around">
@@ -34,11 +91,14 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
               </h2>
             </div>
             <div className="w-full flex items-stretch">
-              <div className="w-2/12 flex justify-center items-center">
+              <button
+                className="w-2/12 flex justify-center items-center"
+                onClick={() => setPrevItem()}
+              >
                 <div className="w-3/5 hover:bg-[#D9D9D9] py-4 pr-1 opacity-70 rounded-md flex items-center justify-center">
                   <Image src={Arrow} alt="Arrow" />
                 </div>
-              </div>
+              </button>
               <div className="relative w-8/12 aspect-square">
                 <Image
                   src={product.image}
@@ -47,7 +107,10 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
                   fill
                 />
               </div>
-              <div className="w-2/12 flex justify-center items-center">
+              <button
+                className="w-2/12 flex justify-center items-center"
+                onClick={() => setNextItem()}
+              >
                 <div className="w-3/5 hover:bg-[#D9D9D9] py-4 pr-1 opacity-70 rounded-md flex items-center justify-center">
                   <Image
                     src={Arrow}
@@ -55,11 +118,55 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
                     className="transform scale-x-[-1]"
                   />
                 </div>
-              </div>
+              </button>
             </div>
           </div>
-          <div className="w-1/2 md:pl-8 flex flex-col justify-start p-12">
-            <p className="text-gray-700 mb-6">{product.description}</p>
+          <div className="w-1/2 md:pl-8 flex flex-col gap-4 justify-start p-12">
+            <h1 className="font-bold text-4xl">{selectedProduct?.title}</h1>
+            <p className="text-gray-700 mb-6">{selectedProduct?.description}</p>
+
+            {product.subcategories && (
+              <div className="flex w-full justify-start gap-4 flex-wrap">
+                {product.subcategories.map((subcategory) => (
+                  <button
+                    key={subcategory}
+                    onClick={() => setActiveCategory(subcategory)}
+                  >
+                    <p
+                      className={`text-pinkcity-dark min-w-5/12 px-6 py-2 flex justify-center items-center border border-pinkcity-dark rounded-xl ${
+                        subcategory === activeCategory
+                          ? "bg-pinkcity-dark text-white"
+                          : "bg-white text-pinkcity-dark"
+                      }`}
+                    >
+                      {subcategory}
+                    </p>
+                  </button>
+                ))}
+              </div>
+            )}
+            {activeProducts && (
+              <div className="w-full flex flex-wrap gap-4 mt-6">
+                {activeProducts.map((item) => (
+                  <button
+                    key={item.title}
+                    onClick={() => setSelectedProduct(item)}
+                    className="w-1/5"
+                  >
+                    <div
+                      className={`flex flex-col gap-2 justify-center items-center p-3 ${
+                        item == selectedProduct ? "bg-[#F35C81]/13" : ""
+                      }`}
+                    >
+                      <div className={`w-10/12 opacity-100`}>
+                        <Image src={item.image} alt={item.title} />
+                      </div>
+                      <p className="text-center text-xs">{item.title}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
