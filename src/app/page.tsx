@@ -13,6 +13,7 @@ import FAQ from "@/outlets/FAQ";
 import Banner from "../../public/multimedia/banner.svg";
 import Banner2 from "../../public/multimedia/banner_2.svg";
 import Header from '@/components/Header';
+import { MobileProvider } from '@/components/MobileProvider';
 
 const BrochureOverlay = dynamic(() => import('@/components/BrochureOverlay'), { ssr: false });
 
@@ -42,7 +43,7 @@ export default function Home() {
   const closeBrochure = () => setIsBrochureOpen(false);
 
   return (
-    <>
+    <MobileProvider>
       <Header onBrochureClick={openBrochure} />
       {isBrochureOpen && <BrochureOverlay onClose={closeBrochure} />}
       <main className="mx-auto no-scrollbar">
@@ -57,6 +58,6 @@ export default function Home() {
         <FAQ />
         <ContactUs />
       </main>
-    </>
+    </MobileProvider>
   );
 }
