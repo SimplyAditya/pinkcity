@@ -167,7 +167,7 @@ const AboutUs = () => {
           } text-justify flex flex-col`}
         >
           {isMobile && (
-            <div className="w-full flex justify-start place-items-stretch gap-3">
+            <div className="w-full flex justify-start place-items-stretch gap-3 pb-4">
               <div className="h-full bg-pinkcity-dark text-pinkcity-dark text-lg">
                 h
                 <br />h
