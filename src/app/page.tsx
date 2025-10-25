@@ -13,7 +13,7 @@ import FAQ from "@/outlets/FAQ";
 import Banner from "../../public/multimedia/banner.svg";
 import Banner2 from "../../public/multimedia/banner_2.svg";
 import Header from '@/components/Header';
-import { MobileProvider } from '@/components/MobileProvider';
+import { MobileProvider, useMobile } from '@/components/MobileProvider';
 
 const BrochureOverlay = dynamic(() => import('@/components/BrochureOverlay'), { ssr: false });
 
@@ -36,6 +36,24 @@ const productBanners = [
   },
 ];
 
+const PageContent = () => {
+  const isMobile = useMobile();
+  return (
+    <main className="mx-auto no-scrollbar">
+      <Hero />
+      {!isMobile && <AboutBanner />}
+      <AboutUs />
+      <ProductBanner {...productBanners[0]} />
+      <TopSellers />
+      <OurProducts />
+      <ProductBanner {...productBanners[1]} />
+      <SocialMediaSection />
+      <FAQ />
+      <ContactUs />
+    </main>
+  );
+}
+
 export default function Home() {
   const [isBrochureOpen, setIsBrochureOpen] = useState(false);
 
@@ -46,18 +64,7 @@ export default function Home() {
     <MobileProvider>
       <Header onBrochureClick={openBrochure} />
       {isBrochureOpen && <BrochureOverlay onClose={closeBrochure} />}
-      <main className="mx-auto no-scrollbar">
-        <Hero />
-        <AboutBanner />
-        <AboutUs />
-        <ProductBanner {...productBanners[0]} />
-        <TopSellers />
-        <OurProducts />
-        <ProductBanner {...productBanners[1]} />
-        <SocialMediaSection />
-        <FAQ />
-        <ContactUs />
-      </main>
+      <PageContent />
     </MobileProvider>
   );
 }

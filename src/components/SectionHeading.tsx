@@ -1,13 +1,16 @@
 import React from "react";
+import { useMobile } from "@/components/MobileProvider";
 
 const SectionHeading = ({ title }: { title: string }) => {
+  const isMobile = useMobile();
+
   return (
-    <h1 className="relative inline-block text-5xl font-extrabold tracking-[0.02em]">
+    <h1 className={`relative inline-block font-extrabold tracking-[0.02em] ${isMobile ? 'text-3xl' : 'text-5xl'}`}>
       {title}
-      <div className="absolute bottom-[-25%] right-[-15%] z-[-1] opacity-80">
+      <div className={`absolute z-[-1] opacity-80 ${isMobile ? 'bottom-[-20%] right-[-10%]' : 'bottom-[-25%] right-[-15%]'}`}>
         <svg
-          width="186"
-          height="35"
+          width={isMobile ? "120" : "186"}
+          height={isMobile ? "23" : "35"}
           viewBox="0 0 186 35"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

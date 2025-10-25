@@ -26,7 +26,7 @@ const ContactUs = () => {
       <div className="flex flex-col gap-6 justify-center items-center max-w-5xl text-center">
         <h2 className="text-6xl font-extrabold tracking-wide">Contact PinkCity Mouth Freshener</h2>
         <h3 className="text-3xl font-semibold tracking-wide">
-          Jaipur's Leading Mukhwas Manufacturer
+          Jaipur{"'"}s Leading Mukhwas Manufacturer
         </h3>
         <p className="text-xl max-w-4xl">
           Get in touch with <strong>PinkCity Mouth Freshener</strong>, your trusted source for premium mukhwas, paan, and traditional mouth fresheners in Jaipur. Wholesale and bulk orders welcome!
