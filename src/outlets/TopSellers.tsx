@@ -9,7 +9,7 @@ import TopSellerMobileItem from "@/components/TopSellerMobileItem";
 
 const topSellersData = [
   { text: "Banarasi Paan", imageSrc: Banarasi },
-  { text: "Calcutti Pancvcv Gold", imageSrc: CalcultiPaanGold },
+  { text: "Calcutti Pan Gold", imageSrc: CalcultiPaanGold },
   { text: "Dry Paan", imageSrc: DryPaan },
 ];
 
@@ -36,7 +36,7 @@ const TopSellers = () => {
       </div>
       <div
         className={`w-full pb-0 flex justify-around items-center gap-6 ${
-          isMobile ? "flex-col px-8" : "flex-row p-16"
+          isMobile ? "flex-col px-4" : "flex-row p-16"
         }`}
       >
         {!isMobile ? (
