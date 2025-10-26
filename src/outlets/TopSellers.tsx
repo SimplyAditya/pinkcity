@@ -9,7 +9,7 @@ import TopSellerMobileItem from "@/components/TopSellerMobileItem";
 
 const topSellersData = [
   { text: "Banarasi Paan", imageSrc: Banarasi },
-  { text: "Calcutti Pan Gold", imageSrc: CalcultiPaanGold },
+  { text: "Calcutti Pancvcv Gold", imageSrc: CalcultiPaanGold },
   { text: "Dry Paan", imageSrc: DryPaan },
 ];
 

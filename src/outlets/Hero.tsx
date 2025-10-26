@@ -273,7 +273,7 @@ const Hero = () => {
               </button>
             </div>
           ) : (
-            <div className="absolute bottom-10 flex flex-col text-xl text-white opacity-50 animate-bounce">
+            <div className="absolute bottom-25 flex flex-col text-xl text-white opacity-50 animate-bounce">
               <FontAwesomeIcon icon={faChevronDown} />
               <FontAwesomeIcon icon={faChevronDown} />
             </div>
