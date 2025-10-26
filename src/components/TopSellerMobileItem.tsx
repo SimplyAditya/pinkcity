@@ -9,7 +9,7 @@ type Props = {
 
 const TopSellerMobileItem = ({ text, imageSrc }: Props) => {
   return (
-    <div className="w-full h-44 aspect-square relative bg-[radial-gradient(circle,_#FE5E85,_#D93A61)] rounded-[20px] overflow-hidden">
+    <div className="w-full h-48 aspect-square relative bg-[radial-gradient(circle,_#FE5E85,_#D93A61)] rounded-[20px] overflow-hidden">
       <Image
         src={Star}
         alt="star"
