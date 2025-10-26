@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useRef, useEffect } from "react";
 import Star from "../../public/images/star.svg";
 import Image, { StaticImageData } from "next/image";
+import { useMobile } from "./MobileProvider";
 
 type Props = {
   text: string;
@@ -13,6 +14,7 @@ type Props = {
 
 const TopSellerItem = ({ text, imageSrc }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const isMobile = useMobile();
   const [initialHeight, setInitialHeight] = useState<number | undefined>(
     undefined
   );
@@ -26,7 +28,7 @@ const TopSellerItem = ({ text, imageSrc }: Props) => {
 
   return (
     <div
-      className="w-3/12 flex flex-col justify-start items-center gap-4 pb-4 group"
+      className={`${isMobile ? "w-full" : "w-3/12"} flex flex-col justify-start items-center gap-4 pb-4 group`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

@@ -188,7 +188,7 @@ const OurProducts = () => {
           retail options for all our products.
         </p>
       </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 py-20">
+      <div className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 py-20">
         {products.map((product, index) => (
           <div key={index} onClick={() => openModal(product)}>
             <ProductCard title={product.title} image={product.image} />
