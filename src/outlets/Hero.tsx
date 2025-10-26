@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useMobile } from "@/components/MobileProvider";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -11,9 +12,12 @@ const Hero = () => {
 
   useEffect(() => {
     setIsAnimated(false);
-    const timer = setTimeout(() => {
-      setIsAnimated(true);
-    }, isMobile ? 1 : 200);
+    const timer = setTimeout(
+      () => {
+        setIsAnimated(true);
+      },
+      isMobile ? 1 : 200
+    );
     return () => clearTimeout(timer);
   }, [isMobile]);
 
@@ -250,7 +254,7 @@ const Hero = () => {
               Since 1982
             </h1>
           </div>
-          {!isMobile && (
+          {!isMobile ? (
             <div className="relative h-4/10 lg:h-3/10 xl:h-1/10 min-h-42 w-full flex justify-center overflow-hidden">
               <button
                 className={`absolute left-1/2 -translate-x-1/2 transition-all duration-2000 ${
@@ -267,6 +271,11 @@ const Hero = () => {
                   EXPLORE !
                 </h1>
               </button>
+            </div>
+          ) : (
+            <div className="absolute h-2/10 flex flex-col justify-center text-xl text-white bottom-0 animate-bounce opacity-50">
+              <FontAwesomeIcon icon={faChevronDown} />
+              <FontAwesomeIcon icon={faChevronDown} />
             </div>
           )}
         </div>
