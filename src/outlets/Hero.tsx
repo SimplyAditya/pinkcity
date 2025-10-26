@@ -10,14 +10,11 @@ const Hero = () => {
   const isMobile = useMobile();
 
   useEffect(() => {
-    if (isMobile) {
+    setIsAnimated(false);
+    const timer = setTimeout(() => {
       setIsAnimated(true);
-    } else {
-      const timer = setTimeout(() => {
-        setIsAnimated(true);
-      }, 200);
-      return () => clearTimeout(timer);
-    }
+    }, isMobile ? 1 : 200);
+    return () => clearTimeout(timer);
   }, [isMobile]);
 
   return (

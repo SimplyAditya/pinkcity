@@ -10,7 +10,6 @@ const SocialMediaSection = () => {
   const [startBounce, setStartBounce] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [cards, setCards] = useState(videosData.videos);
-  const numVideos = cards.length;
   const isMobile = useMobile();
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -44,6 +43,8 @@ const SocialMediaSection = () => {
     setTouchEnd(null);
   };
 
+
+
   useEffect(() => {
     if (isExpanded && !isMobile) {
       const timer = setTimeout(() => {
@@ -57,95 +58,49 @@ const SocialMediaSection = () => {
     setCards(videosData.videos);
   }, [isMobile]);
 
-  if (isMobile) {
-    return (
-      <div className="p-8 flex flex-col items-center justify-center">
-        <SectionHeading title="Social Media" />
-        <div className="w-full h-[70vh] relative -mt-10">
-          {cards.map((video, index) => {
-            const isTopCard = index === numVideos - 1;
-            const cardProps = isTopCard
-              ? {
-                  onTouchStart: onTouchStartFunc,
-                  onTouchMove: onTouchMoveFunc,
-                  onTouchEnd: onTouchEndFunc,
-                }
-              : {};
-
-            return (
-              <div
-                key={video.src}
-                className={`w-[60%] aspect-[9/16] absolute transition-all ease-in-out duration-500`}
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  transform: `translate(-50%, -50%) translateY(${
-                    (index - (numVideos - 1)) * 20
-                  }px) scale(${1 - (numVideos - 1 - index) * 0.05})`,
-                  zIndex: index,
-                }}
-                {...cardProps}
-              >
-                <VideoCard src={video.src} />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="p-20 pb-0 flex flex-col items-center justify-center">
+    <div className={`flex flex-col items-center justify-center ${isMobile ? 'py-8 p-8' : 'p-20 pb-0'}`}>
       <SectionHeading title="Social Media" />
       <div
-        className="w-full h-screen relative cursor-pointer -mt-30"
-        onClick={() => setIsExpanded(true)}
+        className={`w-full relative h-screen ${isMobile ? 'mt-80 -mb-30' : 'cursor-pointer -mt-30'}`}
+        onClick={!isMobile ? () => setIsExpanded(true) : undefined}
+        onTouchStart={isMobile ? onTouchStartFunc : undefined}
+        onTouchMove={isMobile ? onTouchMoveFunc : undefined}
+        onTouchEnd={isMobile ? onTouchEndFunc : undefined}
       >
-        {videosData.videos.map((video, index) => {
+        {cards.map((video, index) => {
           const rotation = (index - Math.floor(videosData.videos.length / 2)) * 5;
-          const cardWidthPercentage = 18;
-          const gapPercentage =
-            (100 - videosData.videos.length * cardWidthPercentage) /
-            (videosData.videos.length + 1);
-          const leftPosition =
-            gapPercentage + index * (cardWidthPercentage + gapPercentage);
+          const cardWidthPercentage = isMobile ? 100 : 18;
+          const gapPercentage = isMobile ? 0 : (100 - videosData.videos.length * cardWidthPercentage) / (videosData.videos.length + 1);
+          const leftPosition = isMobile ? 50 : gapPercentage + index * (cardWidthPercentage + gapPercentage);
 
           const isBounceUp = index % 2 === 0;
           const isHovered = hoveredIndex === index;
 
-          const bounceClass =
-            startBounce && !isHovered
-              ? isBounceUp
-                ? "bounce-up"
-                : "bounce-down"
-              : "";
+          const bounceClass = startBounce && !isHovered && !isMobile ? (isBounceUp ? "bounce-up" : "bounce-down") : "";
 
           let transform;
-          if (isHovered) {
+          if (isHovered && !isMobile) {
             transform = "translateY(-50%)";
-          } else if (isExpanded) {
+          } else if (isExpanded && !isMobile) {
             transform = `translateY(${isBounceUp ? -40 : -20}%)`;
           } else {
             transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
           }
 
-          const left = isExpanded ? `${leftPosition}%` : "50%";
+          const left = (isExpanded && !isMobile) ? `${leftPosition}%` : "50%";
 
-          let zIndex =
-            index < Math.ceil(videosData.videos.length / 2)
-              ? index
-              : videosData.videos.length - 1 - index;
-          if (isHovered) {
+          let zIndex = index < Math.ceil(videosData.videos.length / 2) ? index : videosData.videos.length - 1 - index;
+          if (isHovered && !isMobile) {
             zIndex = 10;
           }
 
           return (
             <div
               key={video.src}
-              className={`w-[18%] aspect-[9/16] absolute transition-all ease-in-out duration-1000 ${bounceClass}`}
+              className={`${isMobile ? 'w-full' : 'w-[18%]'} aspect-[9/16] absolute transition-all ease-in-out duration-1000 ${bounceClass}`}
               style={{
-                top: "50%",
+                top: isMobile ? `${10 + index * 10}%` : "50%",
                 left: left,
                 transform: transform,
                 zIndex: zIndex,
@@ -153,8 +108,8 @@ const SocialMediaSection = () => {
             >
               <VideoCard
                 src={video.src}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={!isMobile ? () => setHoveredIndex(index) : undefined}
+                onMouseLeave={!isMobile ? () => setHoveredIndex(null) : undefined}
               />
             </div>
           );
