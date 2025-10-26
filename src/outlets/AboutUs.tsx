@@ -177,7 +177,9 @@ const AboutUs = () => {
                   isMobile ? "text-xl" : "text-2xl py-2"
                 } sticky top-40 bg-white z-10`}
               >
-                Premium Quality Mukhwas for Every Occasion
+                Premium Quality Mukhwas
+                <br />
+                 for Every Occasion
               </h2>
             </div>
           )}
