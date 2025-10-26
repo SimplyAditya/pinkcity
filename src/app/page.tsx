@@ -14,6 +14,7 @@ import Banner from "../../public/multimedia/banner.svg";
 import Banner2 from "../../public/multimedia/banner_2.svg";
 import Header from '@/components/Header';
 import { MobileProvider, useMobile } from '@/components/MobileProvider';
+import Footer from '@/components/Footer';
 
 const BrochureOverlay = dynamic(() => import('@/components/BrochureOverlay'), { ssr: false });
 
@@ -39,7 +40,7 @@ const productBanners = [
 const PageContent = () => {
   const isMobile = useMobile();
   return (
-    <main className="mx-auto no-scrollbar">
+    <main className="mx-auto no-scrollbar max-w-screen">
       <Hero />
       {!isMobile && <AboutBanner />}
       <AboutUs />
@@ -50,6 +51,7 @@ const PageContent = () => {
       <SocialMediaSection />
       <FAQ />
       <ContactUs />
+      <Footer/>
     </main>
   );
 }

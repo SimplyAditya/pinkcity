@@ -5,11 +5,14 @@ import {
   faInstagram,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { useMobile } from "./MobileProvider";
 
 const Footer = () => {
+  const isMobile = useMobile();
+
   return (
     <footer className="bg-black text-white flex flex-col items-center justify-center p-16" role="contentinfo">
-      <div className="w-full flex items-start justify-between">
+      <div className={`w-full flex items-start justify-between ${isMobile ? "flex-col gap-4" : "flex-row" }`}>
         <div className="flex flex-col items-center gap-10">
           <Logo />
           <div className="text-center mb-6">
@@ -40,7 +43,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex gap-24 opacity-90">
+        <div className={`flex opacity-90 ${isMobile ? "flex-col gap-14" : "flex-row gap-24" }`}>
           <div className="text-left flex flex-col gap-4">
             <h4 className="font-bold text-lg mb-4">Company</h4>
             <a href="#about" className="text-sm hover:text-pinkcity transition-colors">About Us</a>
