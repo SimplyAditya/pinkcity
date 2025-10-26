@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
@@ -273,7 +273,7 @@ const Hero = () => {
               </button>
             </div>
           ) : (
-            <div className="absolute h-2/10 flex flex-col justify-center text-xl text-white bottom-0 animate-bounce opacity-50">
+            <div className="absolute bottom-10 flex flex-col text-xl text-white opacity-50 animate-bounce">
               <FontAwesomeIcon icon={faChevronDown} />
               <FontAwesomeIcon icon={faChevronDown} />
             </div>

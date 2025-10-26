@@ -2,6 +2,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Star from "../../public/images/star.svg";
 import Design from "../../public/images/design.svg";
+import { useMobile } from "./MobileProvider";
 
 interface ProductCardProps {
   title: string;
@@ -9,6 +10,34 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ title, image }) => {
+  const isMobile = useMobile();
+
+  const renderTitle = () => {
+    if (isMobile) {
+      const words = title.split(' ');
+      if (words.length > 1) {
+        const lastWord = words.pop();
+        const firstPart = words.join(' ');
+        return (
+          <>
+            {firstPart}
+            <br />
+            {lastWord}
+          </>
+        );
+      } else {
+        return (
+          <>
+            {title}
+            <br />
+            &nbsp;
+          </>
+        );
+      }
+    }
+    return title;
+  };
+
   return (
     <div className="group rounded-[25px] p-1 bg-gradient-border transition-transform duration-1000 hover:scale-[1.1] relative hover:shadow-xl">
       <div className="bg-white pb-6 md:pb-10 rounded-[22px] flex flex-col justify-center items-center relative">
@@ -26,10 +55,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, image }) => {
           />
         </div>
         <h3
-          className="relative font-bold text-2xl md:text-3xl -mt-8 md:-mt-12 product-title-animation text-center"
+          className="relative font-bold text-xl sm:text-2xl md:text-3xl -mt-8 md:-mt-12 product-title-animation text-center"
           style={{ fontFamily: "var(--font-bentham)" }}
         >
-          {title}
+          {renderTitle()}
         </h3>
       </div>
       {/* Corner Designs */}
