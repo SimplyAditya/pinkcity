@@ -14,9 +14,9 @@ const topSellersData = [
 const TopSellers = () => {
   return (
     <section className="w-full py-24 flex flex-col justify-center items-center gap-14 relative" id="bestsellers">
-      <SectionHeading title="Best Selling Mukhwas Products" />
+      <SectionHeading title="Best Selling Products" />
       <div className="text-center max-w-3xl mb-8 px-4">
-        <h2 className="text-2xl font-semibold mb-4">PinkCity's Most Popular Mouth Fresheners</h2>
+        <h2 className="text-2xl font-semibold mb-4">PinkCity{"'"}s Most Popular Mouth Fresheners</h2>
         <p className="text-lg text-gray-700">
           Discover our top-selling <strong>traditional mukhwas</strong> products. These customer favorites showcase the authentic taste of <strong>Jaipur mouth fresheners</strong> that have made PinkCity a household name since 1982.
         </p>

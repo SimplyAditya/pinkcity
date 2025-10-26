@@ -172,7 +172,7 @@ const OurProducts = () => {
       id="products"
       className="w-full p-10 flex flex-col justify-center items-center"
     >
-      <SectionHeading title="Our Premium Mukhwas Products" />
+      <SectionHeading title="Our Premium Products" />
       <div className="text-center max-w-4xl my-8">
         <h2 className="text-2xl font-semibold mb-4">
           Explore PinkCity Mouth Freshener Product Range
