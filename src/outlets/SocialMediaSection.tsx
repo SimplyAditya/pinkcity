@@ -62,7 +62,7 @@ const SocialMediaSection = () => {
     <div className={`flex flex-col items-center justify-center ${isMobile ? 'py-8 p-8' : 'p-20 pb-0'}`}>
       <SectionHeading title="Social Media" />
       <div
-        className={`w-full relative h-screen ${isMobile ? 'mt-80 -mb-30' : 'cursor-pointer -mt-30'}`}
+        className={`w-full relative h-screen ${isMobile ? 'mt-50 -mb-50' : 'cursor-pointer -mt-30'}`}
         onClick={!isMobile ? () => setIsExpanded(true) : undefined}
         onTouchStart={isMobile ? onTouchStartFunc : undefined}
         onTouchMove={isMobile ? onTouchMoveFunc : undefined}
@@ -98,7 +98,7 @@ const SocialMediaSection = () => {
           return (
             <div
               key={video.src}
-              className={`${isMobile ? 'w-full' : 'w-[18%]'} aspect-[9/16] absolute transition-all ease-in-out duration-1000 ${bounceClass}`}
+              className={`${isMobile ? 'w-[70%]' : 'w-[18%]'} aspect-[9/16] absolute transition-all ease-in-out duration-1000 ${bounceClass}`}
               style={{
                 top: isMobile ? `${10 + index * 10}%` : "50%",
                 left: left,
