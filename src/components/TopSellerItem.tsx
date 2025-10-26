@@ -21,10 +21,10 @@ const TopSellerItem = ({ text, imageSrc }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (containerRef.current && initialHeight === undefined) {
+    if (containerRef.current) {
       setInitialHeight(containerRef.current.offsetHeight);
     }
-  }, [initialHeight]);
+  }, [isMobile]);
 
   return (
     <div
