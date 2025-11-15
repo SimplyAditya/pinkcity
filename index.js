@@ -1,27 +1,43 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
-require('dotenv').config();
+const express = require("express");
+const nodemailer = require("nodemailer");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use(cors());
+const allowed = [
+  "https://pinkcitymouthfresheners.com",
+  "http://localhost:3000",
+];
 
-app.post('/contact', async (req, res) => {
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowed.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("not allowed"));
+      }
+    },
+  })
+);
+
+app.post("/contact", async (req, res) => {
   try {
-    console.log('Received contact form submission');
+    console.log("Received contact form submission");
     const { firstName, lastName, email, phone, message } = req.body;
 
     if (!firstName || !email || !message) {
-      return res.status(400).json({ error: 'Missing required fields' });
+      return res.status(400).json({ error: "Missing required fields" });
     }
     console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS);
-    console.log('Sending email to:', email);
+    console.log("Sending email to:", email);
     // Nodemailer transporter setup
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -31,7 +47,7 @@ app.post('/contact', async (req, res) => {
     const adminMailOptions = {
       from: `"PinkCity Mouthfreshners" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: 'New Contact Form Submission',
+      subject: "New Contact Form Submission",
       html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
         <div style="background-color: #FE5E85; padding: 20px; text-align: center;">
@@ -74,7 +90,7 @@ app.post('/contact', async (req, res) => {
     const userMailOptions = {
       from: `"PinkCity" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: 'Thank you for contacting PinkCity!',
+      subject: "Thank you for contacting PinkCity!",
       html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
         <div style="background-color: #FE5E85; padding: 20px; text-align: center;">
@@ -102,20 +118,19 @@ app.post('/contact', async (req, res) => {
 
     await Promise.all([
       transporter.sendMail(adminMailOptions),
-      transporter.sendMail(userMailOptions)
+      transporter.sendMail(userMailOptions),
     ]);
 
-    res.status(200).json({ message: 'Email sent successfully' });
-
+    res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: "Internal Server Error" });
   } finally {
-    console.log('Contact form submission processing completed');
+    console.log("Contact form submission processing completed");
   }
 });
-app.get('/', (req, res) => {
-  res.send('Welcome to the PinkCity Contact Form API');
+app.get("/", (req, res) => {
+  res.send("Welcome to the PinkCity Contact Form API");
 });
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
