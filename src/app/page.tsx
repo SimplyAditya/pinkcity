@@ -15,6 +15,7 @@ import Banner2 from "../../public/multimedia/banner_2.svg";
 import Header from '@/components/Header';
 import { MobileProvider, useMobile } from '@/components/MobileProvider';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
 
 const BrochureOverlay = dynamic(() => import('@/components/BrochureOverlay'), { ssr: false });
 
@@ -52,6 +53,7 @@ const PageContent = () => {
       <FAQ />
       <ContactUs />
       <Footer/>
+      <Chatbot />
     </main>
   );
 }

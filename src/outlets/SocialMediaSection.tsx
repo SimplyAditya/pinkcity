@@ -1,6 +1,6 @@
 'use client';
 import SectionHeading from "@/components/SectionHeading";
-import React, { useState, useEffect, TouchEvent } from "react";
+import React, { useState, useEffect, TouchEvent, useRef } from "react";
 import VideoCard from "@/components/VideoCard";
 import videosData from "@/data/socialVideos.json";
 import { useMobile } from "@/components/MobileProvider";
@@ -11,6 +11,7 @@ const SocialMediaSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [cards, setCards] = useState(videosData.videos);
   const isMobile = useMobile();
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -43,7 +44,31 @@ const SocialMediaSection = () => {
     setTouchEnd(null);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsExpanded(true);
+        } else {
+          setIsExpanded(false);
+          setStartBounce(false);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
 
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (isExpanded && !isMobile) {
@@ -59,11 +84,10 @@ const SocialMediaSection = () => {
   }, [isMobile]);
 
   return (
-    <div className={`flex flex-col items-center justify-center ${isMobile ? 'py-8 p-8' : 'p-20 pb-0'}`}>
+    <div ref={sectionRef} className={`flex flex-col items-center justify-center ${isMobile ? 'py-8 p-8' : 'p-20 pb-0'}`}>
       <SectionHeading title="Social Media" />
       <div
-        className={`w-full relative h-screen ${isMobile ? 'mt-50 -mb-50' : 'cursor-pointer -mt-30'}`}
-        onClick={!isMobile ? () => setIsExpanded(true) : undefined}
+        className={`w-full relative h-screen ${isMobile ? 'mt-50 -mb-50' : '-mt-30'}`}
         onTouchStart={isMobile ? onTouchStartFunc : undefined}
         onTouchMove={isMobile ? onTouchMoveFunc : undefined}
         onTouchEnd={isMobile ? onTouchEndFunc : undefined}

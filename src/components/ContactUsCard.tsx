@@ -43,6 +43,7 @@ const ContactUsCard = ({
     if (validity) {
       setButtonStyle({}); // Reset style when form becomes valid
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formData]);
 
   const handleChange = (
@@ -57,7 +58,7 @@ const ContactUsCard = ({
     if (validate()) {
       setIsSubmitting(true);
       try {
-        const res = await fetch("/api/contact", {
+        const res = await fetch("http://localhost:4000/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -65,8 +66,10 @@ const ContactUsCard = ({
           body: JSON.stringify(formData),
         });
 
-        if (res.ok) {
-          showAlert("Message sent successfully!", "success");
+        const data = await res.json();
+
+        if (data.message) {
+          showAlert(data.message, "success");
           setFormData({
             firstName: "",
             lastName: "",
@@ -74,10 +77,12 @@ const ContactUsCard = ({
             phone: "",
             message: "",
           });
+        } else if (data.error) {
+          showAlert(data.error, "error");
         } else {
           showAlert("Failed to send message. Please try again.", "error");
         }
-      } catch (error) {
+      } catch{
         showAlert("Failed to send message. Please try again.", "error");
       }
       setIsSubmitting(false);
